@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="data">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay5-3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay5-4.zip!/" />
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay5-5.zip!/" />
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay6-10.zip!/" />
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay5-14.zip!/" />
+      <root url="jar://$PROJECT_DIR$/data/SignalDisplay6-9.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
