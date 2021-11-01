@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="OctaneSDKJava-1.28.0.1-jar-with-dependencies">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/OctaneSDKJava-1.28.0.1-jar-with-dependencies.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
