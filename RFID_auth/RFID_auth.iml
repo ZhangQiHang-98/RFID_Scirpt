@@ -7,14 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../RF-Tools-master/lib/OctaneSDKJava-1.28.0.1-jar-with-dependencies.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="OctaneSDKJava-1.28.0.1-jar-with-dependencies1" level="project" />
+    <orderEntry type="library" name="OctaneSDKJava-1.28.0.1-jar-with-dependencies" level="project" />
+    <orderEntry type="library" name="SignalDisplay" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="OctaneSDKJava-3.0.0.0" level="project" />
   </component>
 </module>

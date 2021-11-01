@@ -1,5 +1,6 @@
 package com.rfid.readerPrint;
 
+import com.rfid.Config.ReaderPrintConfig;
 import com.rfid.rfTool.RFRead;
 
 import java.util.HashMap;
@@ -14,11 +15,12 @@ public class CollectionDiffDb {
 
 
         // 配置阅读器地址
-        String hostname = Config.hostname;
+        String hostname = ReaderPrintConfig.hostname;
         System.out.println(hostname);
 
         // 天线端口选择  R220:{1,2}  R420:{1,2,3,4}
         short[] port = new short[]{1};//仅使用RF-Ware自带的1号天线
+
 
         // 传输功率设定
         double TxPowerinDbm = 25;// Dbm 10~32.5

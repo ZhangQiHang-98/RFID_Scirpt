@@ -1,14 +1,8 @@
 package com.rfid.rfTool;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,8 +11,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.impinj.octane.AntennaConfigGroup;
 import com.impinj.octane.BitPointers;
@@ -27,7 +19,6 @@ import com.impinj.octane.ImpinjReader;
 import com.impinj.octane.MemoryBank;
 import com.impinj.octane.OctaneSdkException;
 import com.impinj.octane.ReaderMode;
-import com.impinj.octane.ReaderModel;
 import com.impinj.octane.ReportConfig;
 import com.impinj.octane.ReportMode;
 import com.impinj.octane.Settings;
@@ -36,7 +27,6 @@ import com.impinj.octane.TagFilter;
 import com.impinj.octane.TagFilterMode;
 import com.impinj.octane.TagFilterOp;
 import com.impinj.octane.TagReport;
-import com.rfid.rfTool.TagReportListenerImplementation;
 
 /**
  * @Description 阅读函数类

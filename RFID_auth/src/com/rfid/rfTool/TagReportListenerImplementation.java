@@ -46,6 +46,9 @@ public class TagReportListenerImplementation implements TagReportListener {
                 System.out.print(" doppler: " + t.getRfDopplerFrequency());
             }
 
+            if (t.isRfPhaseAnglePresent()){
+                System.out.print(" phase: " + t.getPhaseAngleInRadians());
+            }
             if (t.isPeakRssiInDbmPresent()) {
                 System.out.print(" peak_rssi: " + t.getPeakRssiInDbm());
             }

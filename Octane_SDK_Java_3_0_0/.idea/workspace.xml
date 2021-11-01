@@ -1,13 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b04cba6-b311-455b-b81b-2f2872cf8448" name="Default Changelist" comment="" />
+    <list default="true" id="82f7dc9d-8fd0-4aac-a33a-540cd6699ab6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/readerPrint/CollectData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/readerPrint/ReadPrintUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Octane_SDK_Java_3_0_0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Octane_SDK_Java_3_0_0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaChangeListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaChangeListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaConfigGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaConfigGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaEventType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaEventType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaHubStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaHubStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaHubStatusGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaHubStatusGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaIds.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaIds.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaStatusGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaStatusGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaUtilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AntennaUtilities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStartConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStartConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStartMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStartMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStopConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStopConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStopMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/AutoStopMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BackgroundWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BackgroundWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BitPointers.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BitPointers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BlockPermalockMask.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BlockPermalockMask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BlockPermalockResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BlockPermalockResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferOverflowEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferOverflowEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferOverflowListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferOverflowListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferWarningEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferWarningEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferWarningListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/BufferWarningListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/CommunicationsStandardType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/CommunicationsStandardType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectAsyncResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectAsyncResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionAttemptEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionAttemptEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionAttemptListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionAttemptListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionCloseEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionCloseEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionCloseListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionCloseListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionLostListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ConnectionLostListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DiagnosticReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DiagnosticReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DiagnosticsReportListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DiagnosticsReportListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionFieldOfView.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionFieldOfView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReportListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReportListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReportType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionReportType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionTagPopulationStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/DirectionTagPopulationStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/FeatureSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/FeatureSet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/FilterSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/FilterSettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiChangeListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiChangeListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiConfigGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiConfigGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiStatusGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpiStatusGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoConfigGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoConfigGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpoMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpsCoordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/GpsCoordinates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/HubConnectedStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/HubConnectedStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/HubFaultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/HubFaultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjReader.MessageHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjReader.MessageHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjReader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjTimestamp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ImpinjTimestamp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveTimeoutListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveTimeoutListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveTimer.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KeepaliveTimer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KillResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/KillResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationConfidenceFactors.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationConfidenceFactors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReportListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReportListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReportType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LocationReportType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockMemoryBank.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockMemoryBank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockTagResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockTagResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LockType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LowDutyCycleSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/LowDutyCycleSettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MarginReadMask.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MarginReadMask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MarginReadResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MarginReadResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MemoryBank.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/MemoryBank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/OctaneSdkException.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/OctaneSdkException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/PcBits.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/PcBits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/PlacementConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/PlacementConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtAccessRange.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtAccessRange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtDataProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtDataProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtGetConfigResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtGetConfigResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtPersistence.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtPersistence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtSetConfigResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/QtSetConfigResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RShellConnectionType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RShellConnectionType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RShellSocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RShellSocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReadResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReadResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStartEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStartEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStartListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStartListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStopEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStopEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStopListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReaderStopListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReportConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReportConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReportMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/ReportMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RshellEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RshellEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RshellReply.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RshellReply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RxSensitivityTableEntry.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/RxSensitivityTableEntry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SearchMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SearchMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SectorConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SectorConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SequenceState.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SequenceState.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SequenceTriggerType.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SequenceTriggerType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SpatialConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SpatialConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SpatialMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SpatialMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SshRShellSocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/SshRShellSocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Status.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/Tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagBlockPermalockOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagBlockPermalockOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagBlockPermalockOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagBlockPermalockOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagData.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilterMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilterMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilterOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagFilterOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagKillOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagKillOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagKillOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagKillOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockState.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagLockState.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagMarginReadOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagMarginReadOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagMarginReadOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagMarginReadOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagModelDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagModelDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagModelName.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagModelName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpCompleteListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpCompleteListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpSequence.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagOpSequence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtGetOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtGetOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtGetOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtGetOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtSetOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtSetOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtSetOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagQtSetOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReadOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReadOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReadOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReadOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReportListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagReportListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagWriteOp.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagWriteOp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagWriteOpResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TagWriteOpResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TargetTag.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TargetTag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TelnetRShellSocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TelnetRShellSocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TiltSensorValue.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TiltSensorValue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TxPowerTableEntry.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/TxPowerTableEntry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/WordPointers.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/WordPointers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/WriteResultStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/WriteResultStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/XArrayConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/XArrayConfig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/XArrayMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/XArrayMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/com/impinj/octane/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/package-list" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/package-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/javadoc/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/javadoc/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/AdvancedGPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/AdvancedGPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/AntennaChangeListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/AntennaChangeListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/BlockPermalock.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/BlockPermalock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/BufferOverflowListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/BufferOverflowListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/BufferWarningListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/BufferWarningListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/BulkReadWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/BulkReadWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ConfigureManyAntennas.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ConfigureManyAntennas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ConnectionAttemptListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ConnectionAttemptListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ConnectionLostListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ConnectionLostListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/DisconnectedOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/DisconnectedOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/FilteredTagReportListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/FilteredTagReportListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/GpiChangeListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/GpiChangeListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/HelloOctaneSdk.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/HelloOctaneSdk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/KeepAliveListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/KeepAliveListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/Keepalives.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/Keepalives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/KillTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/KillTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/LocationReportListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/LocationReportListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/LockUserMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/LockUserMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/LowDutyCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/LowDutyCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/MarginRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/MarginRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/MultipleReaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/MultipleReaders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/OptimizedRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/OptimizedRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/QT.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/QT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/QueryReaderSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/QueryReaderSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/QueryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/QueryStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadFastId.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadFastId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsFiltered.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsFiltered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsGpiTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsGpiTrigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsOverTLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsOverTLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsPeriodicTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadTagsPeriodicTrigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadUserMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReadUserMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderStartListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderStartListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderStopListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReaderStopListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/ReducedPowerFrequencies.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/ReducedPowerFrequencies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/RfDoppler.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/RfDoppler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/RshellExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/RshellExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/RxSensitivityRamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/RxSensitivityRamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SampleProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SampleProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SetGPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SetGPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SetReaderModes.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SetReaderModes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SetTxFrequencies.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SetTxFrequencies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SoftwareFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SoftwareFiltering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderFeatures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderLocationMulti.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/SpatialReaderLocationMulti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/TagOpCompleteListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/TagOpCompleteListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/TagReportListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/TagReportListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/TxPowerRamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/TxPowerRamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/WaitForQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/WaitForQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/WriteEpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/WriteEpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/com/example/sdksamples/WriteUserMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/com/example/sdksamples/WriteUserMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RFID_auth/RFID_auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../RFID_auth/RFID_auth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/readerPrint/CollectionDiffDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/readerPrint/CollectionDiffDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/readerPrint/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/Config/ReaderPrintConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/rfTool/RFRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/rfTool/RFRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/rfTool/TagReportListenerImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RFID_auth/src/com/rfid/rfTool/TagReportListenerImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../亚喆没有CV版本/亚喆没有CV版本.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1zlBWe27naZV2P8ejNYhK3U23I3" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="207yUXETszzYrKdRbdkZYI7Kbkt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -17,28 +246,47 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0b04cba6-b311-455b-b81b-2f2872cf8448" name="Default Changelist" comment="" />
-      <created>1634712826421</created>
+      <changelist id="82f7dc9d-8fd0-4aac-a33a-540cd6699ab6" name="Default Changelist" comment="" />
+      <created>1635409936576</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1634712826421</updated>
-      <workItem from="1634712827537" duration="767000" />
-      <workItem from="1634714453924" duration="1193000" />
-      <workItem from="1634881811692" duration="11000" />
-      <workItem from="1634889347504" duration="804000" />
-      <workItem from="1635227465253" duration="1379000" />
+      <updated>1635409936576</updated>
+      <workItem from="1635409937744" duration="4240000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
