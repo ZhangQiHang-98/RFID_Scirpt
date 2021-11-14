@@ -14,7 +14,7 @@ import numpy as np
 import myplot
 import myunwrap
 import math
-
+import filters
 
 def rp_process(file_path):
     # 获取csv中的数据，默认没有频率不一致的情况
@@ -71,14 +71,18 @@ def rp_process(file_path):
 
 
 # TODO : 对AutoTag的处理方式进行适当的修改
+# 由于不同相位的alpha*f1/fi为一个定值，能否直接将其计算出来
 def auto_tag_process(df):
     # 首先根据df中的频率进行分组
-    print(df)
     # 抽取一个字典列表，字典元素为freq与phase_list
     freq_phase_dict = {}
     for i in range(len(df)):
         if df.iloc[i]["freq"] not in freq_phase_dict:
             freq_phase_dict[df.iloc[i]["freq"]] = []
+            freq_phase_dict[df.iloc[i]["freq"]].append(df.iloc[i]["phase"])
+        freq_phase_dict[df.iloc[i]["freq"]].append(df.iloc[i]["phase"])
+
+    # 计算所有频率前6个与参考频率后6个的平均相位
 
 
 def hop_process(file_path):
@@ -88,6 +92,7 @@ def hop_process(file_path):
 
     # 将相位进行Unwrap操作
     phase_list = myunwrap.unwrap(phase_list)
+    phase_list = filters.hampel(np.array(phase_list))
     df["phase"] = phase_list
     # AutoTag的处理方式
     auto_tag_process(df)
