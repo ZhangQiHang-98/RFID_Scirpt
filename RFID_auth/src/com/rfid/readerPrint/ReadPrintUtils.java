@@ -323,7 +323,7 @@ public class ReadPrintUtils {
                     reader.start();
                     Thread.sleep(duration);
                     reader.stop();
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 }
             }
             reader.disconnect();
@@ -411,10 +411,9 @@ public class ReadPrintUtils {
      * @param <T>      字符串或数字
      */
     public static <T> void myWriteFile(String filename, ArrayList<T> content) {
-        String fileName = new SimpleDateFormat("yyyyMMddHHMMSS").format(new Date());
+        String timeFlag = new SimpleDateFormat("yyyyMMddHHMMSS").format(new Date());
 
-        File file = new File(fileName + filename + ".csv");
-
+        File file = new File(ReaderPrintConfig.filePath + timeFlag + filename + ".csv");
         BufferedWriter bw = null;
         try {
             bw = new BufferedWriter(new FileWriter(file));

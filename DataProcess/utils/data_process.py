@@ -16,7 +16,7 @@ import math
 
 def rp_process(file_path):
     # 获取csv中的数据，默认没有频率不一致的情况
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, header=None)
     df.columns = ["tag", "cur_freq", "cur_power", "real_freq", "time_stamp", "phase"]
     # TODO : 判断是否有频率不一致的情况
     # TODO : 判断是否有read_rate为0的情况
@@ -28,12 +28,14 @@ def rp_process(file_path):
     rate_row = []
     phase_row = []
     cur_freq = df.iloc[0]["cur_freq"]
+    print(len(grouped))
     for name, group in grouped:
         # 计算当前频率和功率下的平均阅读率
         first_time = group.iloc[0]["time_stamp"]
         last_time = group.iloc[-1]["time_stamp"]
-        read_rate = len(group) * 1000000 / (last_time - first_time)
-        # 当前频率和功率下的平均相位
+
+        read_rate = len(group)
+        # 当前频率和功率下的平均相位s
         avg_phase = group["phase"].mean()
         print(name, read_rate, avg_phase)
         if cur_freq != name[0]:
@@ -50,19 +52,19 @@ def rp_process(file_path):
 
     rate_mat = np.array(rate_mat)
     phase_mat = np.array(phase_mat)
-
     # 获取MTP矩阵，取每个频率下，最小可以阅读到的功率等级（在这里暂时用index代替）
     mtp_vec = []
-    for i in range(rate_mat.shape[0]):
-        for j in range(rate_mat.shape[1]):
-            if rate_mat[i][j] != 0:
-                mtp_vec.append(j)
-                break
-            continue
+    # for i in range(rate_mat.shape[0]):
+    #     for j in range(rate_mat.shape[1]):
+    #         if rate_mat[i][j] != 0:
+    #             mtp_vec.append(j)
+    #             break
+    #         continue
     # 获取ITPA矩阵
 
     # 对相位进行处理，首先绘制相位热力图
     # 转置
+    print(phase_mat)
     myplot.phase_heatmap(phase_mat)
 
 
@@ -70,7 +72,10 @@ def hop_process(file_path):
     df = pd.read_csv(file_path)
     df.columns = ["tag", "freq", "time_stamp", "phase", "rssi"]
     phase_list = 2 * math.pi - df["phase"].values
+
     phase_list = myunwrap.unwrap(phase_list)
 
+    # 相位图的横坐标
+    x_list = df["time_stamp"].values - df["time_stamp"].values[0]
     # 暂时只展示相位图
-    myplot.phase_scatter(phase_list)
+    myplot.phase_scatter(x_list, phase_list)

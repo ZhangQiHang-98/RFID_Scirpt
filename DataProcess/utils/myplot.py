@@ -12,16 +12,11 @@ import numpy as np
 
 
 def phase_heatmap(phase_mat):
-    # sns.set_context({"figure.figsize": (8, 8)})
-    # sns.heatmap(phase_mat)
-    temp = []
-    for i in range(phase_mat.shape[0]):
-        temp.append(phase_mat[i][3])
-    print(temp)
-    plt.scatter(np.arange(len(temp)), temp)
+    sns.set_context({"figure.figsize": (8, 8)})
+    sns.heatmap(phase_mat)
     plt.show()
 
 
-def phase_scatter(phase_list):
-    plt.scatter(np.arange(len(phase_list)), phase_list)
+def phase_scatter(x, phase_list):
+    plt.scatter(x, phase_list)
     plt.show()

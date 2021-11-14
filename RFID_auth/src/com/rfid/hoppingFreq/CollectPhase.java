@@ -6,10 +6,12 @@ import com.rfid.config.ReaderPrintConfig;
 import com.rfid.readerPrint.ReadPrintUtils;
 import com.rfid.rfTool.TagReportListenerImplementation;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class CollectPhase {
     /**
@@ -96,8 +98,9 @@ public class CollectPhase {
                     List<Tag> tags = report0.getTags();
                     for (Tag t : tags) {
                         if (HoppingFreqConfig.targetMask.equals(t.getEpc().toString())) {
-                            String temp = t.getEpc().toString() + "," + t.getLastSeenTime().ToString() + ","
-                                    + t.getPhaseAngleInRadians() + "," + t.getPeakRssiInDbm();
+                            String temp = t.getEpc().toString() + "," + t.getChannelInMhz() + ","
+                                    + t.getLastSeenTime().ToString() + "," + t.getPhaseAngleInRadians()
+                                    + "," + t.getPeakRssiInDbm();
                             System.out.println(temp);
                             TagInfoArray.add(temp);
                         }
@@ -121,7 +124,7 @@ public class CollectPhase {
             reader.stop();
             reader.disconnect();
 
-            ReadPrintUtils.myWriteFile("hopping", TagInfoArray);
+            myWriteFile("normal", TagInfoArray);
         } catch (OctaneSdkException ex) {
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
@@ -201,7 +204,7 @@ public class CollectPhase {
             //调频处理
             if (!f.isHoppingRegion()) {
                 ArrayList<Double> freqList = new ArrayList<>();
-                Collections.shuffle(HoppingFreqConfig.freqList);
+                //Collections.shuffle(HoppingFreqConfig.freqList);
                 freqList.addAll(HoppingFreqConfig.freqList);
                 settings.setTxFrequenciesInMhz(freqList);
             }
@@ -240,7 +243,7 @@ public class CollectPhase {
             reader.stop();
             reader.disconnect();
 
-            ReadPrintUtils.myWriteFile("hopping", TagInfoArray);
+            myWriteFile("hopping", TagInfoArray);
         } catch (OctaneSdkException ex) {
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
@@ -249,8 +252,29 @@ public class CollectPhase {
         }
     }
 
+
+    public static <T> void myWriteFile(String filename, ArrayList<T> content) {
+        String timeFlag = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+
+        File file = new File(HoppingFreqConfig.filePath + timeFlag + filename + ".csv");
+        BufferedWriter bw = null;
+        try {
+            bw = new BufferedWriter(new FileWriter(file));
+            for (int i = 0; i < content.size(); i++) {
+                String temp = (String) content.get(i);
+                bw.write(temp); // 写入所有的EPC,RSSI,Phase,Hz,time,天线号
+                //	bw.write("," + (i + 1));// ,id
+                bw.newLine();
+            }
+            bw.flush();
+            bw.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
-//        collectNormalPhase();
+        //collectNormalPhase();
         collectHoppingPhase();
     }
 }

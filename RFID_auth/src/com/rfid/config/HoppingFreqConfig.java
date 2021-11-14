@@ -17,7 +17,20 @@ public class HoppingFreqConfig {
     // 标签过滤设定
     public static String targetMask = "A996";
 
+    // 采集的数据存放的位置
+    public static String filePath = "D:\\RFID_Scirpt\\data\\hop\\";
+
     // 频率列表
-    public static List<Double> freqList = Arrays.asList(920.625, 920.875, 921.125, 921.375, 921.625, 921.875, 922.125, 922.375);
+    public static List<Double> freqList = Arrays.asList(getFreqList(920.625,924.375));
+
+    public static Double[] getFreqList(Double startFreq, Double endFreq) {
+
+        // 根据最小间隔0.25Mhz从920.625 MHz to 924.375生成频率列表
+        Double[] freqList = new Double[(int) ((endFreq - startFreq) / 0.25 + 1)];
+        for (int i = 0; i < freqList.length; i++) {
+            freqList[i] = startFreq + i * 0.25;
+        }
+        return freqList;
+    }
 
 }

@@ -7,11 +7,10 @@ from config import *
 import glob
 import os
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     rp_path = glob.glob(os.path.join(READ_PRINT_FILES_PATH, '*.csv'))
     hop_path = glob.glob(os.path.join(HOP_FILES_PATH, '*.csv'))
-    # for path in total_path:
+    # for path in rp_path:
     #     data_process.rp_process(path)
     for path in hop_path:
         print(path)
