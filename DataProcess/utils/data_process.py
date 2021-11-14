@@ -1,3 +1,5 @@
+from typing import Dict
+
 2  # !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 """
@@ -68,12 +70,27 @@ def rp_process(file_path):
     myplot.phase_heatmap(phase_mat)
 
 
+# TODO : 对AutoTag的处理方式进行适当的修改
+def auto_tag_process(df):
+    # 首先根据df中的频率进行分组
+    print(df)
+    # 抽取一个字典列表，字典元素为freq与phase_list
+    freq_phase_dict = {}
+    for i in range(len(df)):
+        if df.iloc[i]["freq"] not in freq_phase_dict:
+            freq_phase_dict[df.iloc[i]["freq"]] = []
+
+
 def hop_process(file_path):
     df = pd.read_csv(file_path)
     df.columns = ["tag", "freq", "time_stamp", "phase", "rssi"]
     phase_list = 2 * math.pi - df["phase"].values
 
+    # 将相位进行Unwrap操作
     phase_list = myunwrap.unwrap(phase_list)
+    df["phase"] = phase_list
+    # AutoTag的处理方式
+    auto_tag_process(df)
 
     # 相位图的横坐标
     x_list = df["time_stamp"].values - df["time_stamp"].values[0]
