@@ -10,5 +10,5 @@
 READ_PRINT_FILES_PATH = "../data/read_print"
 HOP_FILES_PATH = "../data/hop"
 DELTA = 0
-REFER_CHANNEL = "920.875"
+REFER_CHANNEL = 923.125
 HAMPEL = 8
