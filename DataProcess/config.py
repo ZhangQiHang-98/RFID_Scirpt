@@ -12,3 +12,5 @@ HOP_FILES_PATH = "../data/hop"
 DELTA = 0
 REFER_CHANNEL = 923.125
 HAMPEL = 8
+ALPHA_PATH = "../data/my_paper/alpha"
+TEST_PATH = "../data/my_paper/test"

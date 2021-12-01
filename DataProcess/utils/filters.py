@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 """
-@Project ：DataProcess 
+@Project ：DataProcess Hampel滤波函数
 @File    ：filters.py
 @Author  ：Zhang Qihang
 @Date    ：2021/11/14 18:35 
@@ -32,7 +32,7 @@ def hampel(X):
     xsigma = scale * xmad
     xi = ~(np.abs(X - xmedian) <= nsigma * xsigma)  # 找出离群点（即超过nsigma个标准差）
 
-    # 将离群点替换为中为数值
+    # 将离群点替换为中位数值
     xf = X.copy()
     xf[xi] = xmedian[xi]
     return xf

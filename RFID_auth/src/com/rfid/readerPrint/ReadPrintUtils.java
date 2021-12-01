@@ -386,14 +386,14 @@ public class ReadPrintUtils {
             System.out.println("Applying Settings");
             reader.applySettings(settings);
 
-//            System.out.println("Starting");
-//            reader.start();
-//
-//            System.out.println("Press Enter to exit.");
-//            Scanner s = new Scanner(System.in);
-//            s.nextLine();
-//
-//            reader.stop();
+           System.out.println("Starting");
+           reader.start();
+
+           System.out.println("Press Enter to exit.");
+           Scanner s = new Scanner(System.in);
+           s.nextLine();
+
+           reader.stop();
             reader.disconnect();
         } catch (OctaneSdkException ex) {
             System.out.println(ex.getMessage());

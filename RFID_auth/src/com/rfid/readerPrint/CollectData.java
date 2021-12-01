@@ -33,6 +33,7 @@ public class CollectData {
 
         //3.根据中心标签跳N个功率和M个频率来获得N*M的矩阵
         ReadPrintUtils.getFeatureMatrix(centralTagEpc, ReaderPrintConfig.freqList, ReaderPrintConfig.powerList, ReaderPrintConfig.duration);
+
     }
 
 
