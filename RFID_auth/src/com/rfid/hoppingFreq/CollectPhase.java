@@ -90,6 +90,14 @@ public class CollectPhase {
             antennas.getAntenna((short) 1).setTxPowerinDbm(ReaderPrintConfig.TxPowerinDbm);
             antennas.getAntenna((short) 1).setRxSensitivityinDbm(-70);
 
+            //调频处理
+            if (!f.isHoppingRegion()) {
+                ArrayList<Double> freqList = new ArrayList<>();
+                //Collections.shuffle(HoppingFreqConfig.freqList);
+                freqList.add(920.625);
+                settings.setTxFrequenciesInMhz(freqList);
+            }
+
             // 对标签返回信息做了规范
             reader.setTagReportListener(new TagReportListenerImplementation() {
                 @Override
@@ -274,7 +282,7 @@ public class CollectPhase {
         }
     }
     public static void main(String[] args) {
-        //collectNormalPhase();
-        collectHoppingPhase();
+        collectNormalPhase();
+        //collectHoppingPhase();
     }
 }
