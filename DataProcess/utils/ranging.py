@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 """
 @Project    ：DataProcess 
-@File       ：my_utils.py
+@File       ：ranging.py
 @Author     ：Zhang Qihang
 @Description: 论文中使用到的工具类
 @Date       ：2021/11/23 19:55 

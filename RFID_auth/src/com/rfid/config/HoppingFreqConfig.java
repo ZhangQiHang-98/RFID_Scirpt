@@ -5,11 +5,11 @@ import java.util.List;
 
 public class HoppingFreqConfig {
     // 阅读器地址：192.168.0.221
-    public static String hostname = "192.168.0.223";
+    public static String hostname = "192.168.1.27";
     // 天线端口选择  R220:{1,2}  R420:{1,2,3,4}
     public static short[] port = new short[]{1};
     // 传输功率设定
-    public static double TxPowerinDbm = 32.5;
+    public static double TxPowerinDbm = 30;
     // 接收灵敏度设定
     public double RxSensitivityinDbm = -70.0;
     // 阅读器模式

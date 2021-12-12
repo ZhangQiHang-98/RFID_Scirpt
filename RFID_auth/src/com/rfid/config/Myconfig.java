@@ -11,25 +11,27 @@ import lombok.Data;
 public class Myconfig {
 
     // 阅读器地址
-    public static String hostname = "192.168.0.221";
+    public static String hostname = "192.168.0.223";
 
     public static Integer minCounts = 5;
-
+    // 阅读器模式
+    public static String mode = "MaxThroughput";
     // 默认天线功率
     public static double TxPowerinDbm = 25;
 
     // 接收灵敏度设定
     public static double RxSensitivityinDbm = -70.0;
-    // 阅读器模式
-    public static String mode = "MaxThroughput";
+
     // 最小停留时间
     public static long minStayTime = 200;
     // 最大停留时间
     public static long maxStayTime = 1000;
     // 指纹库收集时的停留时间
     public static long collectTime = 1000;
-    // 默认频率列表
+    // 默认频率列表（默认间隔为0.5mHz）
     public static double[] freqList = getFreqList(920.625, 924.125);
+    // 默认功率列表（默认间隔为5W）
+    public static double[] powerList = getPowerList(10.0, 25.0);
     // 采集数据存放位置
     public static String filePath = "D:\\RFID_Scirpt\\data\\my_paper\\";
 
@@ -37,11 +39,21 @@ public class Myconfig {
     public static double[] getFreqList(Double startFreq, Double endFreq) {
 
         // 根据最小间隔0.25Mhz从920.625 MHz to 924.375生成频率列表
-        double[] freqList = new double[(int) ((endFreq - startFreq) / 0.25 + 1)];
+        double[] freqList = new double[(int) ((endFreq - startFreq) / 0.5 + 1)];
         for (int i = 0; i < freqList.length; i++) {
-            freqList[i] = startFreq + i * 0.25;
+            freqList[i] = startFreq + i * 0.5;
         }
         return freqList;
+    }
+
+    // 生成功率范围内的所有功率列表
+    public static double[] getPowerList(Double startPower, Double endPower) {
+        // 根据最小间隔
+        double[] powerList = new double[(int) ((endPower - startPower) / 5 + 1)];
+        for (int i = 0; i < powerList.length; i++) {
+            powerList[i] = startPower + i * 5;
+        }
+        return powerList;
     }
 
     // 随机生成当前停留时间

@@ -64,10 +64,9 @@ public class CollectPhase {
             report.setIncludeLastSeenTime(true);
             report.setIncludeChannel(true);
             report.setMode(ReportMode.Individual);// 每个标签单独作为一个report返回
-            report.setMode(ReportMode.Individual);
 
             // 设置过滤标签设置
-            TagFilter filter1 = new TagFilter();
+/*            TagFilter filter1 = new TagFilter();
             filter1.setMemoryBank(MemoryBank.Epc);
             filter1.setBitPointer(BitPointers.Epc);
             filter1.setBitCount(4L * HoppingFreqConfig.targetMask.length());
@@ -76,7 +75,7 @@ public class CollectPhase {
             FilterSettings filterSettings = new FilterSettings();
             filterSettings.setTagFilter1(filter1);
             filterSettings.setMode(TagFilterMode.OnlyFilter1);
-            settings.setFilters(filterSettings);
+            settings.setFilters(filterSettings);*/
 
             String mode = ReadPrintUtils.chooseMode(readerModel, ReaderPrintConfig.mode);
             settings.setReaderMode(ReaderMode.valueOf(mode));
@@ -98,6 +97,11 @@ public class CollectPhase {
                 settings.setTxFrequenciesInMhz(freqList);
             }
 
+            LowDutyCycleSettings ldc = settings.getLowDutyCycle();
+            ldc.setEmptyFieldTimeoutInMs(2000);
+            ldc.setFieldPingIntervalInMs(1000);
+            ldc.setIsEnabled(false);
+
             // 对标签返回信息做了规范
             reader.setTagReportListener(new TagReportListenerImplementation() {
                 @Override
@@ -105,13 +109,18 @@ public class CollectPhase {
                     // tags为得到的所有标签
                     List<Tag> tags = report0.getTags();
                     for (Tag t : tags) {
-                        if (HoppingFreqConfig.targetMask.equals(t.getEpc().toString())) {
+/*                        if (HoppingFreqConfig.targetMask.equals(t.getEpc().toString())) {
                             String temp = t.getEpc().toString() + "," + t.getChannelInMhz() + ","
                                     + t.getLastSeenTime().ToString() + "," + t.getPhaseAngleInRadians()
                                     + "," + t.getPeakRssiInDbm();
                             System.out.println(temp);
                             TagInfoArray.add(temp);
-                        }
+                        }*/
+                        String temp = t.getEpc().toString() + "," + t.getChannelInMhz() + ","
+                                + t.getLastSeenTime().ToString() + "," + t.getPhaseAngleInRadians()
+                                + "," + t.getPeakRssiInDbm();
+                        System.out.println(temp);
+                        TagInfoArray.add(temp);
                         // 如果标签阵列中有当前监听到的标签
                     }
                 }
@@ -121,14 +130,15 @@ public class CollectPhase {
             reader.applySettings(settings);
 
             //开始扫描
-            System.out.println("在控制台敲击回车开始扫描.");
+/*            System.out.println("在控制台敲击回车开始扫描.");
             System.out.println("再次敲击回车结束扫描.");
             Scanner s = new Scanner(System.in);
-            s.nextLine();
+            s.nextLine();*/
             //System.out.println("Starting");
             reader.start();
-            s = new Scanner(System.in);
-            s.nextLine();
+/*            s = new Scanner(System.in);
+            s.nextLine();*/
+            Thread.sleep(60000);
             reader.stop();
             reader.disconnect();
 
@@ -212,8 +222,12 @@ public class CollectPhase {
             //调频处理
             if (!f.isHoppingRegion()) {
                 ArrayList<Double> freqList = new ArrayList<>();
-                //Collections.shuffle(HoppingFreqConfig.freqList);
-                freqList.addAll(HoppingFreqConfig.freqList);
+                freqList.add(920.625);
+                freqList.add(921.875);
+                freqList.add(922.625);
+                freqList.add(923.625);
+                Collections.shuffle(HoppingFreqConfig.freqList);
+                //freqList.addAll(HoppingFreqConfig.freqList);
                 settings.setTxFrequenciesInMhz(freqList);
             }
 
@@ -234,6 +248,7 @@ public class CollectPhase {
                         // 如果标签阵列中有当前监听到的标签
                     }
                 }
+
             });
 
             // 直接更改不会生效，必须进行apply
@@ -281,6 +296,7 @@ public class CollectPhase {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         collectNormalPhase();
         //collectHoppingPhase();
