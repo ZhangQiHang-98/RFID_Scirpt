@@ -153,7 +153,7 @@ public class AuthReader {
                     Thread.sleep(Myconfig.collectTime);
                     reader.stop();
                     // 跳频休眠时间
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 }
             }
             // 停止收集，并且记录数据

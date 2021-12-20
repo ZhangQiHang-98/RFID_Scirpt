@@ -9,7 +9,7 @@
 """
 import pandas as pd
 import numpy as np
-
+import myplot
 
 def rp_process(file_path):
     # 获取csv中的数据，默认没有频率不一致的情况

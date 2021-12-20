@@ -25,15 +25,17 @@ public class Myconfig {
     // 最小停留时间
     public static long minStayTime = 200;
     // 最大停留时间
-    public static long maxStayTime = 1000;
+    public static long maxStayTime = 500;
     // 指纹库收集时的停留时间
-    public static long collectTime = 1000;
+    public static long collectTime = 500;
     // 默认频率列表（默认间隔为0.5mHz）
     public static double[] freqList = getFreqList(920.625, 924.125);
     // 默认功率列表（默认间隔为5W）
-    public static double[] powerList = getPowerList(10.0, 25.0);
+    public static double[] powerList = getPowerList(15.0, 30.0);
     // 采集数据存放位置
     public static String filePath = "D:\\RFID_Scirpt\\data\\my_paper\\";
+    // 标签EPC
+    public static String TagEPC = "A998";
 
     // 生成频率范围内的所有频率列表
     public static double[] getFreqList(Double startFreq, Double endFreq) {
@@ -49,9 +51,9 @@ public class Myconfig {
     // 生成功率范围内的所有功率列表
     public static double[] getPowerList(Double startPower, Double endPower) {
         // 根据最小间隔
-        double[] powerList = new double[(int) ((endPower - startPower) / 5 + 1)];
+        double[] powerList = new double[(int) ((endPower - startPower) / 2.5 + 1)];
         for (int i = 0; i < powerList.length; i++) {
-            powerList[i] = startPower + i * 5;
+            powerList[i] = startPower + i * 2.5;
         }
         return powerList;
     }
