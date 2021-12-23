@@ -27,7 +27,7 @@ public class Myconfig {
     // 最大停留时间
     public static long maxStayTime = 500;
     // 指纹库收集时的停留时间
-    public static long collectTime = 500;
+    public static long collectTime = 2000;
     // 默认频率列表（默认间隔为0.5mHz）
     public static double[] freqList = getFreqList(920.625, 924.125);
     // 默认功率列表（默认间隔为5W）

@@ -14,7 +14,7 @@ import myplot
 def rp_process(file_path):
     # 获取csv中的数据，默认没有频率不一致的情况
     df = pd.read_csv(file_path, header=None)
-    df.columns = ["tag", "cur_freq", "cur_power", "real_freq", "time_stamp", "phase"]
+    df.columns = ["tag", "cur_freq", "cur_power", " ", "time_stamp", "phase"]
     # TODO : 判断是否有频率不一致的情况
     # TODO : 判断是否有read_rate为0的情况
 

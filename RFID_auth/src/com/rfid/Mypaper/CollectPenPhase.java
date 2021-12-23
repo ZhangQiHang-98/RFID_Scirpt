@@ -51,13 +51,14 @@ public class CollectPenPhase extends Thread {
             String readerModel = f.getReaderModel().toString();//SpeedwayR420 SpeedwayR220
 
             // 在指定的功率与频率列表中随机选择一个功率和频率
-            double[] powerList = new double[]{20, 25, 27.5, 30};
-            double[] freqList = new double[]{920.625, 921.625, 922.625, 923.625};
+            double[] powerList = Myconfig.getPowerList(20.0, 30.0);
+            double[] freqList = Myconfig.getFreqList(920.625, 924.125);
 
             while (flag == false) {
                 // 随机选择一个功率和频率
                 int powerIndex = (int) (Math.random() * powerList.length);
                 double power = powerList[powerIndex];
+                //double power = 25.0;
                 int freqIndex = (int) (Math.random() * freqList.length);
                 double freq = freqList[freqIndex];
                 // 随机选择持续时间
@@ -133,7 +134,7 @@ public class CollectPenPhase extends Thread {
                 reader.applySettings(settings);
                 reader.start();
                 // 收集时间
-                Thread.sleep(stayTime);
+                Thread.sleep(100);
                 reader.stop();
                 // 跳频休眠时间
             }

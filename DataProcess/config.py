@@ -10,11 +10,12 @@
 READ_PRINT_FILES_PATH = "../data/read_print"
 HOP_FILES_PATH = "../data/hop"
 DELTA = 0
-REFER_CHANNEL = 923.125
+REFER_CHANNEL = 920.625
+REFER_POWER = 20
 HAMPEL = 8
 ALPHA_PATH = "../data/my_paper/alpha"
 TEST_PATH = "../data/my_paper/test"
-PEN_PATH = "D:\RFID_Scirpt\data\my_paper\pen_phase"
+PEN_PATH = "D:\\RFID_Scirpt\\data\\my_paper\\pen_phase"
 AUTH_PATH = "D:\\RFID_Scirpt\\data\\my_paper\\auth"
 COMMON_COLUMNS = ["tag", "freq", "time", "phase", "rssi"]
 MORE_COLUMNS = ["tag", "set_freq", "real_freq", "time", "rss", "phase", "set_power", "real_power"]
@@ -34,3 +35,11 @@ def get_freq_list(start_freq, end_freq):
     for i in range(int(len)):
         freq_list.append(start_freq + i * 0.5)
     return freq_list
+
+
+def get_power_index(power):
+    return int((power - REFER_POWER) / 2.5)
+
+
+def get_freq_index(freq):
+    return int((freq - REFER_CHANNEL) / 0.5)

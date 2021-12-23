@@ -77,8 +77,8 @@ public class AuthReader {
             String readerModel = f.getReaderModel().toString();//SpeedwayR420 SpeedwayR220
 
             // 遍历频率，构建数据库
-            for (double freq : Myconfig.freqList) {
-                for (double power : Myconfig.powerList) {
+            for (double freq : Myconfig.getFreqList(920.625, 924.125)) {
+                for (double power : Myconfig.getPowerList(20.0, 30.0)) {
                     System.out.println("current freq is " + freq + " and current power is " + power);
                     // Setting类为阅读器的配置类，获取阅读器的默认设置，如readerMode，searchMode，filters
                     Settings settings = reader.queryDefaultSettings();
@@ -153,7 +153,7 @@ public class AuthReader {
                     Thread.sleep(Myconfig.collectTime);
                     reader.stop();
                     // 跳频休眠时间
-                    Thread.sleep(500);
+                    Thread.sleep(1500);
                 }
             }
             // 停止收集，并且记录数据

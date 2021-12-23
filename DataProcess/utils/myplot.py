@@ -13,6 +13,8 @@ import pandas as pd
 import glob
 import config
 import myunwrap
+import numpy as np
+from sklearn.preprocessing import scale
 
 
 def phase_heatmap(phase_mat):
@@ -21,14 +23,17 @@ def phase_heatmap(phase_mat):
     plt.show()
 
 
-def phase_scatter(path):
+def normalization(data):
+    _range = np.max(data) - np.min(data)
+    return (data - np.min(data)) / _range
 
-    df = pd.read_csv(path)
-    df.columns = config.COMMON_COLUMNS
+
+def phase_scatter(df):
     phases = df["phase"].values
     phases = myunwrap.unwrap(phases)
     times = df["time"].values
-    plt.scatter(times, phases)
+    phases = normalization(np.array(phases))
+    plt.plot(times, phases)
     plt.show()
 
 
