@@ -2,6 +2,7 @@ import numpy as np
 import utils
 
 
+# 计算给定序列集的两两之间的DTW距离
 def calculate_dist_matrix(tseries, dist_fun, dist_fun_params):
     N = len(tseries)
     pairwise_dist_matrix = np.zeros((N, N), dtype=np.float64)
