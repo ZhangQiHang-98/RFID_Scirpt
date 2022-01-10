@@ -14,6 +14,7 @@ import glob
 import config
 import myunwrap
 import numpy as np
+import scipy.constants as C
 from sklearn.preprocessing import scale
 
 
@@ -39,6 +40,11 @@ def phase_scatter(df):
 
 if __name__ == '__main__':
     test_path = glob.glob(os.path.join(config.PEN_PATH, '*.csv'))
-    print(test_path)
-    for path in test_path:
-        phase_scatter(path)
+    file_path = "../20220105104342normal.csv"
+    df = pd.read_csv(file_path, header=None)
+    df.columns = config.COMMON_COLUMNS
+    df["phase"] = 2 * C.pi - df["phase"]
+    phase_scatter(df)
+    # print(test_path)
+    # for path in test_path:
+    #     phase_scatter(path)

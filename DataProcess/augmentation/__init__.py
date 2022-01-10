@@ -2,12 +2,8 @@
 # -*- coding: UTF-8 -*-
 """
 @Project    ：DataProcess 
-@File       ：test.py
+@File       ：__init__.py.py
 @Author     ：Zhang Qihang
 @Description: TODO
-@Date       ：2021/12/22 22:02 
+@Date       ：2022/1/10 14:34 
 """
-
-def test():
-    # 生成随机数
-    pass

@@ -130,15 +130,14 @@ public class CollectPhase {
             reader.applySettings(settings);
 
             //开始扫描
-/*            System.out.println("在控制台敲击回车开始扫描.");
+            System.out.println("在控制台敲击回车开始扫描.");
             System.out.println("再次敲击回车结束扫描.");
             Scanner s = new Scanner(System.in);
-            s.nextLine();*/
-            //System.out.println("Starting");
+            s.nextLine();
+            System.out.println("Starting");
             reader.start();
-/*            s = new Scanner(System.in);
-            s.nextLine();*/
-            Thread.sleep(60000);
+            s = new Scanner(System.in);
+            s.nextLine();
             reader.stop();
             reader.disconnect();
 
