@@ -4,7 +4,7 @@
 @Project    ：DataProcess 
 @File       ：ranging.py
 @Author     ：Zhang Qihang
-@Description: 论文中使用到的工具类
+@Description: 测距工作
 @Date       ：2021/11/23 19:55 
 """
 import matplotlib.pyplot as plt

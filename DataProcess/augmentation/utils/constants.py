@@ -2,7 +2,7 @@ from dba import dba
 
 from distances.dtw.dtw import dynamic_time_warping as dtw
 
-from augment import get_weights_average_selected
+from generating import get_weights_average_selected
 
 UNIVARIATE_DATASET_NAMES = ['50words', 'Adiac', 'ArrowHead', 'Beef', 'BeetleFly',
                             'BirdChicken', 'Car', 'CBF', 'ChlorineConcentration',

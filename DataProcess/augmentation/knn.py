@@ -3,6 +3,7 @@ import operator
 import utils
 
 
+# 根据DTW矩阵选择N个邻居
 def get_neighbors(x_train, x_test_instance, k, dist_fun, dist_fun_params,
                   pre_computed_matrix=None, index_test_instance=None,
                   return_distances=False):

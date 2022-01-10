@@ -1,8 +1,0 @@
-Cython
-numpy
-pandas
-sklearn
-scipy
-matplotlib
-tensorflow-gpu
-keras
