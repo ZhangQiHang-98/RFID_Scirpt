@@ -11,9 +11,6 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import adjusted_rand_score
 from sklearn.preprocessing import LabelEncoder
-
-from scipy.interpolate import spline
-
 import operator
 from scipy.stats import wilcoxon
 
@@ -71,6 +68,15 @@ def transform_labels(y_train, y_test):
     return new_y_train, new_y_test
 
 
+def split_df(path):
+    # tsv文件，因此要用\t制表符隔开
+    data = pd.read_csv(path, header=None, sep='\t').values
+    Y = data[:, 0]
+    X = data[:, 1:]
+    return X, Y
+    # 取df的第一列为lable，后面列为数据
+
+
 def read_all_datasets(root_dir, archive_name, sort_dataset_name=False):
     datasets_dict = {}
 
@@ -78,18 +84,22 @@ def read_all_datasets(root_dir, archive_name, sort_dataset_name=False):
 
     for dataset_name in DATASET_NAMES:
         file_name = root_dir + archive_name + '/' + dataset_name + '/' + dataset_name
-        x_train, y_train = readucr(file_name + '_TRAIN')
-        x_test, y_test = readucr(file_name + '_TEST')
+        x_train, y_train = split_df(file_name + '_TRAIN.tsv')
+        x_test, y_test = split_df(file_name + '_TEST.tsv')
         datasets_dict[dataset_name] = (x_train.copy(), y_train.copy(), x_test.copy(), y_test.copy())
-        dataset_names_to_sort.append((dataset_name, len(x_train)))
-
-    item_getter = 1
-    if sort_dataset_name == True:
-        item_getter = 0
-    dataset_names_to_sort.sort(key=operator.itemgetter(item_getter))
-
-    for i in range(len(DATASET_NAMES)):
-        DATASET_NAMES[i] = dataset_names_to_sort[i][0]
+        # 得到的x_train和y_train是np数组
+    #     x_train, y_train = readucr(file_name + '_TRAIN')
+    #     x_test, y_test = readucr(file_name + '_TEST')
+    #     datasets_dict[dataset_name] = (x_train.copy(), y_train.copy(), x_test.copy(), y_test.copy())
+    #     dataset_names_to_sort.append((dataset_name, len(x_train)))
+    #
+    # item_getter = 1
+    # if sort_dataset_name == True:
+    #     item_getter = 0
+    # dataset_names_to_sort.sort(key=operator.itemgetter(item_getter))
+    #
+    # for i in range(len(DATASET_NAMES)):
+    #     DATASET_NAMES[i] = dataset_names_to_sort[i][0]
 
     return datasets_dict
 

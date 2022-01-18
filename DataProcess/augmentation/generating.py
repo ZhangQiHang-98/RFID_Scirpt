@@ -85,7 +85,7 @@ def augment_train_set(x_train, y_train, classes, N, dba_iters=5,
     # synthetic train set and labels
     synthetic_x_train = []
     synthetic_y_train = []
-    # loop through each class
+    # 循环每个类，对该类下的x_train进行生成
     for c in classes:
         # get the MTS for this class
         c_x_train = x_train[np.where(y_train == c)]
