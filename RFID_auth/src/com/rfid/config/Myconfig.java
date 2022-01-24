@@ -11,7 +11,7 @@ import lombok.Data;
 public class Myconfig {
 
     // 阅读器地址
-    public static String hostname = "192.168.0.223";
+    public static String hostname = "192.168.1.223";
 
     public static Integer minCounts = 5;
     // 阅读器模式
@@ -33,7 +33,7 @@ public class Myconfig {
     // 默认功率列表（默认间隔为5W）
     public static double[] powerList = getPowerList(15.0, 30.0);
     // 采集数据存放位置
-    public static String filePath = "D:\\RFID_Scirpt\\data\\my_paper\\";
+    public static String filePath = "D:\\RFID_Scirpt\\data\\dataset\\";
     // 标签EPC
     public static String TagEPC = "A998";
 

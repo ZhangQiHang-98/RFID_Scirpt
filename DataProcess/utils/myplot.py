@@ -31,9 +31,7 @@ def normalization(data):
 
 def phase_scatter(df):
     phases = df["phase"].values
-    phases = myunwrap.unwrap(phases)
     times = df["time"].values
-    phases = normalization(np.array(phases))
     plt.plot(times, phases)
     plt.show()
 

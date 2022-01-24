@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 
 from scipy.interpolate import CubicSpline  # for warping
 from transforms3d.axangles import axangle2mat  # for rotation
+from random import choice
 
 
 # 1.添加噪声，默认为高斯噪声（正态分布），sigma表示噪声的标准差
@@ -105,6 +106,49 @@ def rand_sample_time_steps(X, percent=0.35):
     tt[1:-1, 2] = np.sort(np.random.randint(1, X.shape[0] - 1, nSample - 2))
     tt[-1, :] = X.shape[0] - 1
     return tt
+
+
+# 8. 窗口切片，默认值是0.8，也就是取整个序列的80%
+def window_slicing(X, percent=0.8):
+    # 一共切n片
+    n = (1 - percent) * 10 + 1
+    len = X.shape[0] * percent
+    res = []
+    for i in range(n):
+        start = (1 - percent) / n - i * (1 - percent) / n
+        res.append(X[start * X.shape[0]:start + len])
+    # 把原来的序列也返回
+    res.append(X)
+    return res
+
+
+# 9.窗口规整，取整个序列的某一个部分进行窗口规整
+# 随机选择10%的序列进行规整，在这里规定好不选择前10%或者是后10%，感觉误差会比较大，因为最前最后还是有未开始的地方
+def window_wraping(X, percent=0.1):
+    res = []
+    len = X.shape[0]
+    choices = [0, 1]
+    for i in range(1, 9):
+        start = i * percent
+        end = start + percent
+        temp = [X[0:start] * len]
+        sub = X[start * len:end * len]
+        sublen = len(sub)
+        # 随机选择加速或者减速
+        if choice(choices):
+            # 增加一倍
+            x = np.linspace(0, sublen, 1)
+            x_new = np.linspace(0, sublen * 2, 1)
+            wrap_res = np.interp(x_new, x, X[start * len:end * len])
+        else:
+            # 减少一倍
+            x = np.linspace(0, sublen, 1)
+            x_new = np.linspace(0, sublen / 2, 1)
+            wrap_res = np.interp(x_new, x, X[start * len:end * len])
+        temp.append(wrap_res)
+        temp.append(X[end * len:])
+        res.append(temp)
+    return res
 
 
 def DA_RandSampling(X, percent=0.35):

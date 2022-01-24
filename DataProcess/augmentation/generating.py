@@ -61,6 +61,9 @@ def get_weights_average_selected(x_train, dist_pair_mat, distance_algorithm='dtw
     return weights, init_dba
 
 
+def my_generating(x_train):
+    pass
+
 # 数据增强的入口
 def augment_train_set(x_train, y_train, classes, N, dba_iters=5,
                       weights_method_name='aa', distance_algorithm='dtw',
