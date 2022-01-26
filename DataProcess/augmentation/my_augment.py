@@ -19,24 +19,20 @@ def tradition_augment(time_series):
 
     """
     aug = []
-
-    for series in time_series:
-        # 先切片
-        temp = window_slicing(series)
-        for item in temp:
-            aug.append(item)
-        # 然后窗口规整
-        temp = window_wraping(series)
-        for item in temp:
-            aug.append(item)
-        aug.append(series)
-
-    # 进行传统增强
+    # 先切片(取整个序列的大部分)
+    temp = window_slicing(time_series)
+    for item in temp:
+        aug.append(item)
+    # 然后窗口规整（对窗口的一小部分进行拉伸或者缩减）
+    temp = window_wraping(time_series)
+    for item in temp:
+        aug.append(item)
+    # 进行传统增强，目前只选择添加噪声，mag_warp和time_warp三种
     for s in aug:
         s = add_noise(s)
         s = mag_warp(s)
         s = time_warp(s)
-    return s
+    return aug
 
 
 def all_augment(time_series):
@@ -47,7 +43,7 @@ def all_augment(time_series):
     Returns:
     """
     after_trad_aug = tradition_augment(time_series)
-
+    # 最终在传统增强完之后，应该就生成csv文件才对，然后基于DBA的方法再去根据每一类不同的csv文件进行累加生成
 
 
 if __name__ == '__main__':
