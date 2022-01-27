@@ -51,7 +51,7 @@ def _dba_iteration(tseries, avg, dist_fun, dist_fun_params, weights):
     """
     # the number of time series in the set
     n = len(tseries)
-    # length of the time series，DBA序列的长度
+    # length of the time series，选中的平均序列的长度
     ntime = avg.shape[0]
     # number of dimensions (useful for MTS)，DBA序列的维度
     num_dim = avg.shape[1]
@@ -63,11 +63,14 @@ def _dba_iteration(tseries, avg, dist_fun, dist_fun_params, weights):
     for s in range(n):
         # 循环取时间序列列表中的每个序列
         series = tseries[s]
-        # 计算他和初始序列的DTW距离矩阵
+        # 计算他和avg序列的DTW距离矩阵
         dtw_dist, dtw = dist_fun(avg, series, **dist_fun_params)
-        # 从大到小进行推导
+        # 从大到小进行推导,i应该是比较小的，j应该是比较大的,之前别人没问题是因为他那个是等长的序列。
+        # 比较好的方法就是进行转置
         i = ntime
         j = series.shape[0]
+        if dtw.shape[0] != i + 1:
+            dtw = dtw.T
         # i是当前DBA序列的长度，j是当前选出的序列的长度
         # 此处的while循环是记录s与avg序列的DTW序列
         while i >= 1 and j >= 1:
@@ -75,7 +78,6 @@ def _dba_iteration(tseries, avg, dist_fun, dist_fun_params, weights):
             # 权重并不影响DTW的计算公式，不会改变序列集和T之间的映射关系
             new_avg[i - 1] += series[j - 1] * weights[s]
             sum_weights[i - 1] += weights[s]
-
             a = dtw[i - 1, j - 1]
             b = dtw[i, j - 1]
             c = dtw[i - 1, j]
@@ -109,7 +111,7 @@ def dba(tseries, max_iter=10, verbose=False, init_avg_method='medoid',
         MTS has a shape (l,m) where l is the length of the time series and 
         m is the number of dimensions of the MTS - in the case of univariate 
         time series m should be equal to one
-        一组时间序列，样式均为(l,m)
+        一组时间序列，样式均为(l,m)，每次生成的时候，要把当前类所有的序列都放进去
     :param max_iter: The maximum number of iterations for the DBA algorithm.
     :param verbose: If true, then provide helpful output.
     :param init_avg_method: Either: 

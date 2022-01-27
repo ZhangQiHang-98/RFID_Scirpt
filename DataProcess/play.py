@@ -22,3 +22,7 @@ z = np.array(z)
 dist_fun = utils.constants.DISTANCE_ALGORITHMS['dtw']
 dist_fun_params = utils.constants.DISTANCE_ALGORITHMS_PARAMS['dtw']
 print(calculate_dist_matrix(z, dist_fun, dist_fun_params))
+
+
+a = [1,2]
+a.append()

@@ -16,6 +16,7 @@ cdef inline int min_c_int(int a, int b): return a if a <= b else b
 # the smallest length of the time series min(x,y) - if negative then no warping window
 # this funuction assumes that x is shorter than y 
 def dynamic_time_warping(np.ndarray[double, ndim=2] x, np.ndarray[double, ndim=2] y , w = -1):
+    # 这里是有一个转换的，使得x一定要比y小
     # make sure x is shorter than y 
     # if not permute
     cdef np.ndarray[double, ndim=2] X = x 

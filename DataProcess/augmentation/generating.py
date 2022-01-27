@@ -62,7 +62,6 @@ def augment_train_set(x_train, y_train, classes, N, dba_iters=5,
         else:
             # 不是aa模式的话，需要DTW矩阵
             dist_pair_mat = calculate_dist_matrix(c_x_train, dist_fun, dist_fun_params)
-        print(dist_pair_mat)
         # loop through the number of synthtectic examples needed
         for n in range(nb_prototypes_per_class):
             # get the weights and the init for avg method

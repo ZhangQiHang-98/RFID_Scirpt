@@ -105,6 +105,9 @@ if __name__ == '__main__':
     x_train = np.array(x_train)
     y_train = np.array(y_train)
     # 遍历所有文件后，得到了全部文件，进行基于DBA的生成
-    print(augment_train_set(x_train, y_train, list(classes), 1, weights_method_name='as'))
-    # todo 是否需要先变成同样的长度？
-    # todo 所有的df拼接成正常时序df中的格式,最后一步，最后加上标签这一特性
+    synthetic_x_train, synthetic_y_train = augment_train_set(x_train, y_train, list(classes), 1,
+                                                             weights_method_name='as')
+
+    # todo 时间序列的长度，是在DBA之前变还是在之后变？
+    # todo 拉成等长，所有的df拼接成正常时序df中的格式,最后一步，最后加上标签这一特性
+    my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train)
