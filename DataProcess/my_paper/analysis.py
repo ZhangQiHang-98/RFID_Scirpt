@@ -73,7 +73,7 @@ if __name__ == '__main__':
     # 计算得到相位矩阵
     for auth_data in auth_datas:
         phase_mat = relation_both_with_phase(auth_data)
-
+    print("完成相位矩阵的计算")
     # 对所有文件进行解码，滤波，插值操作，得到解码后的原始时间序列
     x_train = []
     y_train = []
@@ -100,14 +100,13 @@ if __name__ == '__main__':
                 x_train.append(ts)
                 y_train.append(label)
             classes.add(label)
-            break
-
+    print("完成传统的数据增强")
     x_train = np.array(x_train)
     y_train = np.array(y_train)
     # 遍历所有文件后，得到了全部文件，进行基于DBA的生成
-    synthetic_x_train, synthetic_y_train = augment_train_set(x_train, y_train, list(classes), 1,
-                                                             weights_method_name='as')
-
-    # todo 时间序列的长度，是在DBA之前变还是在之后变？
-    # todo 拉成等长，所有的df拼接成正常时序df中的格式,最后一步，最后加上标签这一特性
-    my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train)
+    syn_num = len(x_train) / len(classes)
+    # 由于dtw需要n^2的复杂度，因此应该是先降维再生成，否则时间太长了
+    # synthetic_x_train, synthetic_y_train = augment_train_set(x_train, y_train, list(classes), syn_num,
+    #                                                         weights_method_name='as')
+    print("完成基于DBA的数据增强")
+    my_write_file(x_train, y_train, [], [])

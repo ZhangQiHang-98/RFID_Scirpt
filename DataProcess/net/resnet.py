@@ -13,6 +13,7 @@ class Classifier_RESNET:
         self.nb_prototypes = nb_prototypes
         self.classes = classes
         if (verbose == True):
+            # verbose为1，表示显示信息
             self.model.summary()
         self.verbose = verbose
         if load_init_weights == True:

@@ -1,11 +1,11 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 """
-@Project    ：DataProcess 
+@Project    ：DataProcess
 @File       ：aug_utils.py
 @Author     ：Zhang Qihang
 @Description: 数据增强过程中的一些工具函数
-@Date       ：2022/1/18 21:09 
+@Date       ：2022/1/18 21:09
 """
 import pandas as pd
 from scipy import interpolate
@@ -58,9 +58,9 @@ def my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train):
 
     res = []
     for i in range(len(final_x)):
-        temp = total_y_train[i]
-        temp.append(final_x[i])
+        temp = final_x[i]
+        temp.append(total_y_train[i])
         res.append(temp)
     df = pd.DataFrame(res)
 
-    df.to_csv("init_data.csv",index = False)
+    df.to_csv("init_data.csv", index=False, header=None)

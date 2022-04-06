@@ -40,6 +40,7 @@ def augment_train_set(x_train, y_train, classes, N, dba_iters=5,
     x_train = np.array([item.reshape(item.shape[0], 1) for item in x_train])
     # 循环每个类，对该类下的x_train进行生成
     for c in classes:
+        print("当前生成到类", c)
         # get the MTS for this class
         c_x_train = x_train[np.where(y_train == c)]
 
@@ -64,6 +65,7 @@ def augment_train_set(x_train, y_train, classes, N, dba_iters=5,
             dist_pair_mat = calculate_dist_matrix(c_x_train, dist_fun, dist_fun_params)
         # loop through the number of synthtectic examples needed
         for n in range(nb_prototypes_per_class):
+            print(c, n)
             # get the weights and the init for avg method
             weights, init_avg = weights_fun(c_x_train, dist_pair_mat,
                                             distance_algorithm=distance_algorithm)
