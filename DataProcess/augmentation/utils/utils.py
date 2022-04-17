@@ -39,7 +39,7 @@ def check_if_file_exits(file_name):
 
 def create_directory(directory_path):
     if os.path.exists(directory_path):
-        return None
+        return directory_path
     else:
         try:
             os.makedirs(directory_path)
@@ -204,8 +204,8 @@ def save_logs(output_directory, hist, y_pred, y_true, duration):
 
     df_best_model['best_model_train_loss'] = row_best_model['loss']
     df_best_model['best_model_val_loss'] = row_best_model['val_loss']
-    df_best_model['best_model_train_acc'] = row_best_model['acc']
-    df_best_model['best_model_val_acc'] = row_best_model['val_acc']
+    df_best_model['best_model_train_acc'] = row_best_model['accuracy']
+    df_best_model['best_model_val_acc'] = row_best_model['val_accuracy']
     df_best_model['best_model_learning_rate'] = row_best_model['lr']
     df_best_model['best_model_nb_epoch'] = index_best_model
 

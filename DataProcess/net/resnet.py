@@ -92,7 +92,8 @@ class Classifier_RESNET:
         # FINAL 
 
         gap_layer = keras.layers.GlobalAveragePooling1D()(output_block_3)
-
+        # dropout
+        gap_layer = keras.layers.Dropout(0.2)(gap_layer)
         output_layer = keras.layers.Dense(nb_classes, activation='softmax')(gap_layer)
 
         model = keras.models.Model(inputs=input_layer, outputs=output_layer)
@@ -104,7 +105,7 @@ class Classifier_RESNET:
 
         file_path = self.output_directory + 'best_model.hdf5'
 
-        model_checkpoint = keras.callbacks.ModelCheckpoint(filepath=file_path, monitor='loss',
+        model_checkpoint = keras.callbacks.ModelCheckpoint(filepath=file_path, monitor='val_loss',
                                                            save_best_only=True)
 
         self.callbacks = [reduce_lr, model_checkpoint]
@@ -130,7 +131,8 @@ class Classifier_RESNET:
 
         if len(x_train) > 4000:  # for ElectricDevices
             mini_batch_size = 128
-
+        x_train = x_train.astype('float64')
+        x_test = x_test.astype('float64')
         hist = self.model.fit(x_train, y_train, batch_size=mini_batch_size, epochs=nb_epochs,
                               verbose=self.verbose, validation_data=(x_test, y_test), callbacks=self.callbacks)
 

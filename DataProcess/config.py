@@ -14,9 +14,11 @@ REFER_CHANNEL = 920.625
 REFER_POWER = 20
 HAMPEL = 10
 ALPHA_PATH = "../data/my_paper/alpha"
-TEST_PATH = "../data/my_paper/test"
-PEN_PATH = "F:\\RFID_Scirpt\\data\\dataset\\origin"
-AUTH_PATH = "F:\\RFID_Scirpt\\data\\init_data\\my_paper\\auth"
+TEST_PATH = "F:\\RFID_Scirpt\\data\\final\\zk"
+# PEN_PATH = "F:\\RFID_Scirpt\\data\\dataset\\origin"
+# 1,2,3,4,5的文件路径
+PEN_PATH = "F:\\RFID_Scirpt\\data\\all_factor_data"
+AUTH_PATH = "F:\\RFID_Scirpt\\data\\auth"
 COMMON_COLUMNS = ["tag", "freq", "time", "phase", "rssi"]
 MORE_COLUMNS = ["tag", "set_freq", "real_freq", "time", "rss", "phase", "set_power", "real_power"]
 

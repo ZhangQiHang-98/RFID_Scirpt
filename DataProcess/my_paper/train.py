@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from net.resnet import Classifier_RESNET
 
 # 首先划分训练集和测试集
-df = pd.read_csv("init_data.csv", header=None)
+df = pd.read_csv("../dataset/all_factor_data/init_data.csv", header=None)
 x = df.iloc[:, 0:-2]
 y = df.iloc[:, -1]
 x = np.array(x)

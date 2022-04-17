@@ -7,9 +7,6 @@
 @Description: 对数据进行分析
 @Date       ：2021/12/13 14:48 
 """
-import numpy as np
-import pandas as pd
-import re
 import aug_utils
 from filters import *
 from reproduce_gyro import *
@@ -69,11 +66,13 @@ if __name__ == '__main__':
     auth_datas = glob.glob(os.path.join(AUTH_PATH, '*.csv'))
 
     only_files = [f for f in listdir(PEN_PATH) if isfile(join(PEN_PATH, f))]
-    phase_mat = []
+    phase_mat = np.zeros(relation_both_with_phase(auth_datas[0]).shape)
     # 计算得到相位矩阵
     for auth_data in auth_datas:
-        phase_mat = relation_both_with_phase(auth_data)
+        phase_mat += relation_both_with_phase(auth_data)
+    phase_mat /= len(auth_datas)
     print("完成相位矩阵的计算")
+    print(phase_mat)
     # 对所有文件进行解码，滤波，插值操作，得到解码后的原始时间序列
     x_train = []
     y_train = []
@@ -82,8 +81,8 @@ if __name__ == '__main__':
         for filename in filenames:
             filename = os.path.join(parent, filename)
             file_name = filename.split('\\')[-1]
-            label = file_name.split('_')[0]
-
+            label = file_name.split('_')[-1]
+            label = label[0]
             init_df = pd.read_csv(filename, header=None)
             init_df.columns = MORE_COLUMNS
             # 生成得到了滤波后的解码数据，将其作为原数据输出
@@ -93,7 +92,13 @@ if __name__ == '__main__':
             # 先做一个插值操作，之后就可以舍弃掉time了
             # 这里的y指的是已经根据时间间隔插值后形成的y，x按照linspace生成即可
             y = aug_utils.my_interpolation(processed_df)
-            # todo  手动去掉前10和后10？
+            leny = len(y)
+            y = y[int(0.05 * leny):int(0.95 * leny)]
+            # # 绘制y
+            # plt.plot(y)
+            # # 将文件名作为图名
+            # plt.title(file_name)
+            # plt.show()
             # 得到了传统数据增强后的所有序列，将其拼接到一个df中
             trad_aug_ts = tradition_augment(y)
             for ts in trad_aug_ts:

@@ -29,6 +29,7 @@ def my_interpolation(df, kind="cubic"):
     return y_new
 
 
+
 # 生成的所有数据进行存储的函数
 def my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train):
     # 处理synthetic_x_train的形状
@@ -55,7 +56,6 @@ def my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train):
         final_x.append(list(after_inter))
 
     # 将x与y拼接好，放入df文件中即可
-
     res = []
     for i in range(len(final_x)):
         temp = final_x[i]
@@ -63,4 +63,4 @@ def my_write_file(x_train, y_train, synthetic_x_train, synthetic_y_train):
         res.append(temp)
     df = pd.DataFrame(res)
 
-    df.to_csv("init_data.csv", index=False, header=None)
+    df.to_csv("init_data_330.csv", index=False, header=None)
