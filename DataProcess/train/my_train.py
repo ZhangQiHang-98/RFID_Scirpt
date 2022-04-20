@@ -17,8 +17,9 @@ from utils.utils import calculate_metrics
 from utils.utils import transform_labels
 from utils.utils import create_directory
 from resnet import Classifier_RESNET
+from my_fcn import Classifier_FCN
 from generating import augment_train_set
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 
 def augment_function(augment_algorithm_name, x_train, y_train, classes, N, limit_N=True):
@@ -84,8 +85,11 @@ def read_data(file_path):
     y_test = test_data[:, -1]
     # 对训练集和测试集进行标准化处理
     min_max_scaler = MinMaxScaler()
-    x_train = min_max_scaler.fit_transform(x_train)
-    x_test = min_max_scaler.transform(x_test)
+    standard_scaler = StandardScaler()
+    # x_train = min_max_scaler.fit_transform(x_train)
+    # x_test = min_max_scaler.transform(x_test)
+    x_train = standard_scaler.fit_transform(x_train)
+    x_test = standard_scaler.transform(x_test)
     datasets_dict = {'12345': (x_train.copy(), y_train.copy(), x_test.copy(), y_test.copy())}
     return datasets_dict
 

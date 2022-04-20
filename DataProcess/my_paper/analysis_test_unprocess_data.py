@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import sklearn
 from keras.models import load_model
 from sklearn.metrics import confusion_matrix
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 from analysis import *
 
@@ -38,7 +38,7 @@ def get_unpred_data(avg_len=132):
             # init_df = do_filter(init_df)
             y = aug_utils.my_interpolation(init_df)
             leny = len(y)
-            y = y[int(0.1 * leny):int(0.9 * leny)]
+            # y = y[int(0.05 * leny):int(0.95 * leny)]
             x_train.append(y)
             y_train.append(label)
             file_list.append(file_name)
@@ -139,7 +139,9 @@ def model_pred(csv_path):
     x_test = data[:, 0:-1]
     y_test = data[:, -1]
     min_max_scaler = MinMaxScaler()
-    x_test = min_max_scaler.fit_transform(x_test)
+    standard_scaler = StandardScaler()
+    # x_test = min_max_scaler.fit_transform(x_test)
+    x_test = standard_scaler.fit_transform(x_test)
     x_test = np.array(x_test).astype('float64')
     y_pred = model.predict(x_test)
     y_pred = np.argmax(y_pred, axis=1)
@@ -256,8 +258,8 @@ def show_origin_data(csv_path):
 
 
 if __name__ == '__main__':
-    # get_unpred_data()
-    # get_test_data()
+    #get_unpred_data(53)
+    get_test_data(53)
     # show_origin_data("train_data.csv")
 
     y_pred, y_test, acc = model_pred("test_data.csv")

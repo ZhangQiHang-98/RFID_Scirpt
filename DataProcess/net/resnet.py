@@ -93,7 +93,7 @@ class Classifier_RESNET:
 
         gap_layer = keras.layers.GlobalAveragePooling1D()(output_block_3)
         # dropout
-        gap_layer = keras.layers.Dropout(0.2)(gap_layer)
+        gap_layer = keras.layers.Dropout(0.3)(gap_layer)
         output_layer = keras.layers.Dense(nb_classes, activation='softmax')(gap_layer)
 
         model = keras.models.Model(inputs=input_layer, outputs=output_layer)
@@ -101,14 +101,15 @@ class Classifier_RESNET:
         model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adam(),
                       metrics=['accuracy'])
 
-        reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='loss', factor=0.5, patience=50, min_lr=0.0001)
+        reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_accuracy', factor=0.5, patience=50, min_lr=0.0001)
+        early_stopping = keras.callbacks.EarlyStopping(monitor='val_accuracy', patience=50, mode='auto')
 
         file_path = self.output_directory + 'best_model.hdf5'
 
-        model_checkpoint = keras.callbacks.ModelCheckpoint(filepath=file_path, monitor='val_loss',
+        model_checkpoint = keras.callbacks.ModelCheckpoint(filepath=file_path, monitor='val_accuracy',
                                                            save_best_only=True)
 
-        self.callbacks = [reduce_lr, model_checkpoint]
+        self.callbacks = [reduce_lr, model_checkpoint, early_stopping]
 
         return model
 
